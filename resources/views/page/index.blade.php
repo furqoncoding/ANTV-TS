@@ -2,7 +2,7 @@
 
 <head>
 
-    <title>TS</title>
+    <title>TS TS</title>
     <link rel="icon" href="{{url('/antv.png')}}" />
 
 
