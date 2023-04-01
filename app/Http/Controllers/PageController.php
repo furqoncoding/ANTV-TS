@@ -176,6 +176,7 @@ class PageController extends Controller
             array(
                 'update_date'=>$date_now,
                 'no_paket'=>$request->nomor_paket,
+                'no_media_order'=>$request->no_media_order,
                 'employee_id'=>$my_array_data['employee_id'],
                 'employee_name'=>$my_array_data['name'],
                 'employee_email'=>$my_array_data['email'],

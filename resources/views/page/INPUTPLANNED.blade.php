@@ -10,8 +10,8 @@
 
 
                 <div style="width: 98%">
-                    <label>AGENCY</label><br>
-                    <input class="textinp" style="align-self: center; width: 83%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;" id="agency" type="text" class="form-control" name="agency">
+                    <label>Nomor Media Order</label><br>
+                    <input class="textinp" style="align-self: center; width: 83%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;" id="no_media_order" type="text" class="form-control" name="no_media_order">
                 </div>
         </div>
 
@@ -23,7 +23,8 @@
 
 
                 <div style="width: 98%">
-                    
+                    <label>AGENCY</label><br>
+                    <input class="textinp" style="align-self: center; width: 83%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;" id="agency" type="text" class="form-control" name="agency">
                 </div>
         </div>
 
