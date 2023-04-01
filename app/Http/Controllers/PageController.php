@@ -147,49 +147,49 @@ class PageController extends Controller
 
     public function insert_INPUTPLANNED(Request $request)
     {
-        // $value = session('auth');
-        // if(gettype($value) == 'object')
-        // {
-        //     $access_token = session('auth')->token;
-        //     $string = base64_decode($access_token);
-        //     $convert1 = substr($string,27);
-        //     $variable = substr($convert1, 0, strpos($convert1, "}"));
-        //     $convert_variable = $variable . "}";
-        //     $my_array_data = json_decode($convert_variable, TRUE);
-        // }
-        // if(gettype($value) == 'array')
-        // {
-        //     $access_token = $value['token'];
-        //     $string = base64_decode($access_token);
-        //     $convert1 = substr($string,27);
-        //     $variable = substr($convert1, 0, strpos($convert1, "}"));
-        //     $convert_variable = $variable . "}";
-        //     $my_array_data = json_decode($convert_variable, TRUE);
-        // }
-        /////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////
-        // date_default_timezone_set("Asia/Jakarta");
-        // $date_now = date("Y-m-d h:i:sa");
-        // $return =  DB::table('ts_sponsor')->insert(
-        //     array(
-        //         'update_date'=>$date_now,
-        //         'no_paket'=>$request->nomor_paket,
-        //         'employee_id'=>$my_array_data['employee_id'],
-        //         'employee_name'=>$my_array_data['name'],
-        //         'employee_email'=>$my_array_data['email'],
-        //         'agency'=>$request->agency,
-        //         'advertiser_product'=>$request->advertiser_product
-        //     )
-        // );
-        /////////////////////////////////////////////////////////////
-        // $data = array(
-        //     'menu'=> 'INPUTPLANNED'
-        // );
-        // return view('page.index')->with('data', $data);
+        $value = session('auth');
+        if(gettype($value) == 'object')
+        {
+            $access_token = session('auth')->token;
+            $string = base64_decode($access_token);
+            $convert1 = substr($string,27);
+            $variable = substr($convert1, 0, strpos($convert1, "}"));
+            $convert_variable = $variable . "}";
+            $my_array_data = json_decode($convert_variable, TRUE);
+        }
+        if(gettype($value) == 'array')
+        {
+            $access_token = $value['token'];
+            $string = base64_decode($access_token);
+            $convert1 = substr($string,27);
+            $variable = substr($convert1, 0, strpos($convert1, "}"));
+            $convert_variable = $variable . "}";
+            $my_array_data = json_decode($convert_variable, TRUE);
+        }
+        ///////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////
+        date_default_timezone_set("Asia/Jakarta");
+        $date_now = date("Y-m-d h:i:sa");
+        $return =  DB::table('ts_sponsor')->insert(
+            array(
+                'update_date'=>$date_now,
+                'no_paket'=>$request->nomor_paket,
+                'employee_id'=>$my_array_data['employee_id'],
+                'employee_name'=>$my_array_data['name'],
+                'employee_email'=>$my_array_data['email'],
+                'agency'=>$request->agency,
+                'advertiser_product'=>$request->advertiser_product
+            )
+        );
+        ///////////////////////////////////////////////////////////
+        $data = array(
+            'menu'=> 'INPUTPLANNED'
+        );
+        return view('page.index')->with('data', $data);
 
 
-        $boa_v_companies = DB::select('SELECT * FROM boa_v_companies ORDER BY id DESC');
-        var_dump($boa_v_companies);
+        // $boa_v_companies = DB::select('SELECT * FROM boa_v_companies ORDER BY id DESC');
+        // var_dump($boa_v_companies);
     }
 
 
