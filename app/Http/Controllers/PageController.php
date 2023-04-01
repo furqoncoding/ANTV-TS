@@ -51,7 +51,7 @@ class PageController extends Controller
         {
             try {
                 $client = new Client();
-                $responseBody = $client->request('POST', 'https://stg-ms-auth.an.tv:443/api/auth/user', 
+                $responseBody = $client->request('POST', 'https://ms-auth.an.tv:443/api/auth/user', 
                     [
                         'verify'  => false,
                         'form_params' => [
