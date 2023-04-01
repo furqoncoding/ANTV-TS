@@ -65,27 +65,25 @@ class PageController extends Controller
                 $responseBody = $e->getResponse();
             }
 
+            var_dump($responseBody);
 
-
-            ///////////////////////////////////////////////////////////////
-            if($responseBody->getStatusCode() == 200)
-            {
-                $responseBody = json_decode($responseBody->getBody());
-                $request->session()->put('auth', $responseBody);
-                
-
-                $data = array(
-                    'menu'=> 'INPUTPLANNED'
-                );
-                return view('page.index')->with('data', $data);
-            }
-            else if($responseBody->getStatusCode() != 200)
-            {
-                $data = array(
-                    'menu'=> 'INPUTPLANNED'
-                );
-                return view('page.index')->with('data', $data);
-            }
+            // ///////////////////////////////////////////////////////////////
+            // if($responseBody->getStatusCode() == 200)
+            // {
+            //     $responseBody = json_decode($responseBody->getBody());
+            //     $request->session()->put('auth', $responseBody);
+            //     $data = array(
+            //         'menu'=> 'INPUTPLANNED'
+            //     );
+            //     return view('page.index')->with('data', $data);
+            // }
+            // else if($responseBody->getStatusCode() != 200)
+            // {
+            //     $data = array(
+            //         'menu'=> 'INPUTPLANNED'
+            //     );
+            //     return view('page.index')->with('data', $data);
+            // }
             ////////////////////////////////////////////////////////LOGINAUTH///////
         }
         if($request->session()->get('auth') != "")
