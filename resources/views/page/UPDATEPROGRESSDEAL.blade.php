@@ -53,50 +53,54 @@
 	<table id="myTable">
 		<thead>
 			<tr>
-				<th><center>Nomor Media Order</center></th>
-				<th><center>Nomor Paket</center></th>
-				<th><center>PLANNED</center></th>
-				<th><center>Agency</center></th>
-				<th><center>Advertiser Product</center></th>
-				<th><center>Periode</center></th>
-				<th><center>Budget Deals</center></th>
-				<th><center>Net Deals</center></th>
-				<th><center>Eps</center></th>
-				<th><center>Type Paket</center></th>
-				<th><center>Program</center></th>
-				<th><center>Status Deals</center></th>
+				<th><center><label>Nomor Media Order</label></center></th>
+				<th><center><label>Nomor Paket</label></center></th>
+				<th><center><label>PLANNED</label></center></th>
+				<th><center><label>Agency</label></center></th>
+				<th><center><label>Advertiser Product</label></center></th>
+				<th><center><label>Periode</label></center></th>
+				<th><center><label>Budget Deals</label></center></th>
+				<th><center><label>Net Deals</label></center></th>
+				<th><center><label>Eps</label></center></th>
+				<th><center><label>Type Paket</label></center></th>
+				<th><center><label>Program</label></center></th>
+				<th><center><label>Status Deals</label></center></th>
 			</tr>
 		</thead>
 		<tbody>
 
 			@foreach($data['ts_sponsor_deals'] as $key => $data)
 			    <tr>
-			      <td><center>{{$data->no_media_order}}</center></td>
-			      <td><center>{{$data->no_paket}}</center></td>
+			      <td><center><label>{{$data->no_media_order}}</label></center></td>
+			      <td><center><label>{{$data->no_paket}}</label></center></td>
 			      <td>
-			      	<center>{{$data->planned_name}}</center>
+			      	<center><label>{{$data->planned_name}}</label></center>
 			      	<br>
 			      	<center><h5>{{$data->planned_email}}</h5></center>
 			      </td>
-			      <td><center>{{$data->agency}}</center></td>
-			      <td><center>{{$data->advertiser_product}}</center></td>
+			      <td><center><label>{{$data->agency}}</label></center></td>
+			      <td><center><label>{{$data->advertiser_product}}</label></center></td>
 			      <td>
 			      	<center>
+			      		<label>
 			      		{{$data->start_periode}} - {{$data->end_periode}}
+			      		</label>
 			      	</center>
 			      </td>
 			      <td>
 			      	<center>
+			      		<label>
 			      		{{$data->budget_deals}}
+			      		</label>
 			      	</center>
 			      	<br>
 			      	<center><h5>{{$data->ket_budget_deals}}</h5></center>
 			      </td>
-			      <td><center>{{$data->net_deals_per_eps}}</center></td>
-			      <td><center>{{$data->eps}}</center></td>
-			      <td><center>{{$data->type_paket}}</center></td>
-			      <td><center>{{$data->program}}</center></td>
-			      <td><center>{{$data->status_deals}}</center></td>
+			      <td><center><label>{{$data->net_deals_per_eps}}</label></center></td>
+			      <td><center><label>{{$data->eps}}</label></center></td>
+			      <td><center><label>{{$data->type_paket}}</label></center></td>
+			      <td><center><label>{{$data->program}}</label></center></td>
+			      <td><center><label>{{$data->status_deals}}</label></center></td>
 			    </tr>
 			@endforeach
 			
