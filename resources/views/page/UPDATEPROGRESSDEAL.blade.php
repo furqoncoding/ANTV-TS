@@ -33,7 +33,7 @@
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
-    	@foreach($data['ts_sponsor_deals'] as $key => $data)
+    	@foreach($data['ts_sponsor'] as $key => $data)
 	        <tr class="table-row" data-search="<?php echo $data->status_deals.$data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email.$data->sales_name.$data->sales_email; ?>">
 	            <td>
 	            	<center>
