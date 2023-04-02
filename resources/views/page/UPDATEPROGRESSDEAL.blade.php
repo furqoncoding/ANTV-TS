@@ -51,7 +51,7 @@
 		            <td><center><label>{{$data->agency}}</label></center></td>
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
-		            	@foreach(array_unique($ts_sponsor_deals, SORT_REGULAR) as $activ)
+		            	@foreach($ts_sponsor_deals[0] as $activ)
 				            <?php
 				            	if(strval($activ['id_sponsor']) == strval($data->id)) 
 				            	{
