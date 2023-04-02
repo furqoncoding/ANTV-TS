@@ -2,126 +2,37 @@
 
 <head>
 	<style type="text/css">
-		.button_resend {
-            margin: auto;
-            width: 98%;
-            height: 98%;
-            background-color: white;
-            border-width: 0px;
-            border-radius: 18px;
-            border-color: white;
-            color: white;
-            background-image: linear-gradient(to right, #4169E1 8%, #48D1CC 38%, #4169E1 100%);
+		#myInput {
+		  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+		  background-position: 10px 12px; /* Position the search icon */
+		  background-repeat: no-repeat; /* Do not repeat the icon image */
+		  width: 100%; /* Full-width */
+		  font-size: 16px; /* Increase font-size */
+		  padding: 12px 20px 12px 40px; /* Add some padding */
+		  border: 1px solid #ddd; /* Add a grey border */
+		  margin-bottom: 12px; /* Add some space below the input */
+		}
 
-            cursor: pointer; 
-        }
-        .button_resend:active {
-            margin: auto;
-            width: 98%;
-            height: 98%;
-            background-color: white;
-            border-width: 0px;
-            border-radius: 18px;
-            border-color: white;
-            color: white;
-            background-image: linear-gradient(to right, #48D1CC 8%, #4169E1 38%, #48D1CC 100%);
+		#myTable {
+		  border-collapse: collapse; /* Collapse borders */
+		  width: 100%; /* Full-width */
+		  border: 1px solid #ddd; /* Add a grey border */
+		  font-size: 18px; /* Increase font-size */
+		}
 
-            cursor: pointer; 
-        }
-        .button_remove {
-            margin: auto;
-            width: 98%;
-            height: 98%;
-            background-color: white;
-            border-width: 0px;
-            border-radius: 18px;
-            border-color: white;
-            margin-top: -28px;
-            margin-bottom: 28px;
-            color: white;
-            background-image: linear-gradient(to right, #FA8072 8%, #FF4500 38%, #FF0000 100%);
+		#myTable th, #myTable td {
+		  text-align: left; /* Left-align text */
+		  padding: 12px; /* Add padding */
+		}
 
-            cursor: pointer; 
-        }
-        .button_remove:active {
-            margin: auto;
-            width: 98%;
-            height: 98%;
-            background-color: white;
-            border-width: 0px;
-            border-radius: 18px;
-            border-color: white;
-            margin-top: -28px;
-            margin-bottom: 28px;
-            color: white;
-            background-image: linear-gradient(to right, #FF4500 8%, #FF0000 38%, #FF4500 100%);
+		#myTable tr {
+		  /* Add a bottom border to all table rows */
+		  border-bottom: 1px solid #ddd;
+		}
 
-            cursor: pointer; 
-        }
-		h1{
-		  font-family: sans-serif;
-		}
-		 
-		table {
-		  font-family: Arial, Helvetica, sans-serif;
-		  color: #666;
-		  text-shadow: 1px 1px 0px #fff;
-		  background: #eaebec;
-		  border: #ccc 1px solid;
-		}
-		 
-		table th {
-		  padding: 15px 35px;
-		  border-left:1px solid #e0e0e0;
-		  border-bottom: 1px solid #e0e0e0;
-		  background: #ededed;
-		}
-		 
-		table th:first-child{  
-		  border-left:none;  
-		}
-		 
-		table tr {
-		  text-align: center;
-		  padding-left: 20px;
-		}
-		 
-		table td:first-child {
-		  text-align: left;
-		  padding-left: 20px;
-		  border-left: 0;
-		}
-		 
-		table td {
-		  padding: 15px 35px;
-		  border-top: 1px solid #ffffff;
-		  border-bottom: 1px solid #e0e0e0;
-		  border-left: 1px solid #e0e0e0;
-		  background: #fafafa;
-		  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-		  background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
-		}
-		 
-		table tr:last-child td {
-		  border-bottom: 0;
-		}
-		 
-		table tr:last-child td:first-child {
-		  -moz-border-radius-bottomleft: 3px;
-		  -webkit-border-bottom-left-radius: 3px;
-		  border-bottom-left-radius: 3px;
-		}
-		 
-		table tr:last-child td:last-child {
-		  -moz-border-radius-bottomright: 3px;
-		  -webkit-border-bottom-right-radius: 3px;
-		  border-bottom-right-radius: 3px;
-		}
-		 
-		table tr:hover td {
-		  background: #f2f2f2;
-		  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-		  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+		#myTable tr.header, #myTable tr:hover {
+		  /* Add a grey background color to the table header and on hover */
+		  background-color: #f1f1f1;
 		}
 	</style>
 </head>
@@ -130,7 +41,8 @@
 
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
 
-	<table cellspacing='0'>
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+	<table id="myTable">
 		<thead>
 			<tr>
 				<th><center>Nomor Media Order</center></th>
