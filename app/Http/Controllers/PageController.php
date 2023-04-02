@@ -33,9 +33,12 @@ class PageController extends Controller
 {
     public function index(Request $request) 
     {
-           
+        $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+        $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
         $data = array(
-            'menu'=> ''
+            'ts_sponsor' => $ts_sponsor,
+            'ts_sponsor_deals' => $ts_sponsor_deals,
+            'menu'=> 'UPDATEPROGRESSDEAL'
         );
         return view('page.index')->with('data', $data);
     }
@@ -74,14 +77,24 @@ class PageController extends Controller
             {
                 $responseBody = json_decode($responseBody->getBody());
                 $request->session()->put('auth', $responseBody);
+                
+
+                $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+                $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
                 $data = array(
+                    'ts_sponsor' => $ts_sponsor,
+                    'ts_sponsor_deals' => $ts_sponsor_deals,
                     'menu'=> 'INPUTPLANNED'
                 );
                 return view('page.index')->with('data', $data);
             }
             else if($responseBody->getStatusCode() != 200)
             {
+                $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+                $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
                 $data = array(
+                    'ts_sponsor' => $ts_sponsor,
+                    'ts_sponsor_deals' => $ts_sponsor_deals,
                     'menu'=> 'INPUTPLANNED'
                 );
                 return view('page.index')->with('data', $data);
@@ -92,7 +105,11 @@ class PageController extends Controller
         {
             $request->session()->put('auth', '');
                     
+            $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+            $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
             $data = array(
+                'ts_sponsor' => $ts_sponsor,
+                'ts_sponsor_deals' => $ts_sponsor_deals,
                 'menu'=> 'INPUTPLANNED'
             );
             return view('page.index')->with('data', $data);
@@ -106,7 +123,13 @@ class PageController extends Controller
     {
 
         $request->session()->put('auth', '');   
+        
+
+        $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+        $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
         $data = array(
+            'ts_sponsor' => $ts_sponsor,
+            'ts_sponsor_deals' => $ts_sponsor_deals,
             'menu'=> 'INPUTPLANNED'
         );
         return view('page.index')->with('data', $data);
@@ -118,21 +141,33 @@ class PageController extends Controller
     {
         if($request->menu == "INPUTPLANNED")
         {
+            $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+            $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
             $data = array(
+                'ts_sponsor' => $ts_sponsor,
+                'ts_sponsor_deals' => $ts_sponsor_deals,
                 'menu'=> 'INPUTPLANNED'
             );
             return view('page.index')->with('data', $data);
         }
         if($request->menu == "UPDATEPROGRESSDEAL")
         {
+            $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+            $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
             $data = array(
+                'ts_sponsor' => $ts_sponsor,
+                'ts_sponsor_deals' => $ts_sponsor_deals,
                 'menu'=> 'UPDATEPROGRESSDEAL'
             );
             return view('page.index')->with('data', $data);
         }
         if($request->menu == "UPDATEPROGRESSORDER")
         {
+            $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+            $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
             $data = array(
+                'ts_sponsor' => $ts_sponsor,
+                'ts_sponsor_deals' => $ts_sponsor_deals,
                 'menu'=> 'UPDATEPROGRESSORDER'
             );
             return view('page.index')->with('data', $data);
@@ -185,7 +220,11 @@ class PageController extends Controller
             )
         );
         ///////////////////////////////////////////////////////////
+        $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+        $ts_sponsor_deals = DB::select('SELECT ts_sponsor_deals.id as id_sponsor_deals,ts_sponsor_deals.employee_id as sales_id,ts_sponsor_deals.employee_name  as sales_name,ts_sponsor_deals.employee_email as sales_email,ts_sponsor_deals.start_periode,ts_sponsor_deals.end_periode,ts_sponsor_deals.budget_deals,,ts_sponsor_deals.ket_budget_deals,ts_sponsor_deals.net_deals_per_eps,ts_sponsor_deals.eps,ts_sponsor_deals.type_paket,ts_sponsor_deals.program,ts_sponsor_deals.status_deals,ts_sponsor.employee_id as planned_id,ts_sponsor.employee_name  as planned_name,ts_sponsor.employee_email as planned_email,ts_sponsor.no_paket,ts_sponsor.no_media_order,ts_sponsor.agency,ts_sponsor.advertiser_product,ts_sponsor.id as id_sponsor FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
         $data = array(
+            'ts_sponsor' => $ts_sponsor,
+            'ts_sponsor_deals' => $ts_sponsor_deals,
             'menu'=> 'INPUTPLANNED'
         );
         return view('page.index')->with('data', $data);

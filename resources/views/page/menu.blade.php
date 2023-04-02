@@ -47,6 +47,9 @@
 @endif
 @if($pages == "UPDATEPROGRESSDEAL")
     <h3>UPDATE PROGRESS DEAL</h3>
+    <br>
+    <br>
+    @include('page.UPDATEPROGRESSDEAL')
 @endif
 @if($pages == "UPDATEPROGRESSORDER")
     <h3>UPDATE PROGRESS ORDER</h3>
