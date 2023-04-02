@@ -41,6 +41,9 @@
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
+    	<?php
+    		$counter = 0;
+    	?>
     	@foreach($data['ts_sponsor'] as $key => $data)
 		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product.$data->no_media_order; ?>">
 		            <td>
@@ -57,50 +60,14 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            	
-		            		foreach($ts_sponsor_deals as $index => $activ)
-		            		{
-
-		            			$counter = 0;
-						        if( $counter == 0 ) 
-				            	{
-		            			
+						    if( $counter == 0 ) 
+				            {
+				            	echo 'tessss';
 		            	?>
-				            <?php
-				            	
-					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
-					            	{
-					            		
-				            		
-				            ?>
-				        <br>
-		            	<center><label>SALES</label></center>
-		            	<br>
-		            	<center><label>{{$activ['sales_name']}}</label></center>
-				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
-				      	<br>       
-				            <?php
-				            			
-					            	}
-					            	else if(strval($activ['id_sponsor']) != strval($data->id)) 
-					            	{	
-					            		
-				            ?>
-				        <br>
-		            	<center><label>Not yet deal progress</label></center>
-		            	<br>
-				            <?php
-				            			
-				            		}
-				            	
-				            	}
-
-				            ?>
+				            
 				        <?php
 				        	}
-				        
-				        
-				        $counter = $counter + 1;
+				        	$counter = $counter + 1;
 				        ?>
 				       
 		            </td>
