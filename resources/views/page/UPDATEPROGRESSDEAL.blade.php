@@ -32,7 +32,7 @@
 	<?php
 		$ts_sponsor_deals = json_decode(json_encode($data['ts_sponsor_deals']), true);
 		$filtered_array = array_filter($ts_sponsor_deals, function($element) {
-		   return $element > 0;
+		   return $element['id'] == 1;
 		});
 		var_dump($filtered_array);
 	?>
