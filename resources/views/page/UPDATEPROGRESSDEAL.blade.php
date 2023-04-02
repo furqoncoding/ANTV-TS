@@ -54,16 +54,42 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            		
 
-							$id = $data->id;
-							$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
-								return strval($element['id']) == strval($id);
-							});
-
-
+		            		foreach($ts_sponsor_deals as $index => $activ)
+		            		{
 		            	?>
-				            
+				            <?php
+
+				            	$id = $data->id;
+								$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
+									return $element['id'] == $id;
+								});
+				            	
+					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
+					            	{
+				            		
+				            ?>
+				        <br>
+		            	<center><label>SALES</label></center>
+		            	<br>
+		            	<center><label>{{$activ['sales_name']}}</label></center>
+				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
+				      	<br>       
+				            <?php
+					            	}
+					            	if(strval($activ['id_sponsor']) != strval($data->id)) 
+					            	{	
+				            ?>
+				        <br>
+		            	<center><label>Not yet deal progress</label></center>
+		            	<br>
+				            <?php
+				            		}
+				            	
+				            ?>
+				        <?php
+				        	}
+				        ?>
 				       
 		            </td>
 		        </tr>
