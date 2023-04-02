@@ -31,10 +31,7 @@
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
 	<?php
 		$ts_sponsor_deals = json_decode(json_encode($data['ts_sponsor_deals']), true);
-		$filtered_array = array_filter($ts_sponsor_deals, function($element) {
-		   return $element['id'] == 1;
-		});
-		var_dump($filtered_array);
+		
 	?>
 	<div class="search-box">
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
@@ -56,7 +53,10 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            		foreach($ts_sponsor_deals as $index => $activ)
+		            		$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
+							   return $element['id_sponsor'] == $data->id;
+							});
+		            		foreach($filtered_array_ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
 				            <?php
