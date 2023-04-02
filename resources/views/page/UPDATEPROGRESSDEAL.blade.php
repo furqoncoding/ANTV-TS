@@ -73,12 +73,7 @@
 				            	}
 				            ?>
 
-				            <?php	
-					           	if($activ['id_sponsor'] != $data->id) 
-					            {
-					            	echo 'not yet a make deals';
-				            	}
-				            ?>
+				            
 				        <?php
 				        	}
 				        ?>
