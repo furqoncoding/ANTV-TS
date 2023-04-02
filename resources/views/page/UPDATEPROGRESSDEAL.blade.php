@@ -49,7 +49,8 @@
 	            
 	            <td>
 		        	<?php
-		        		echo 'tesssss';
+		        		<!-- echo 'tesssss'; -->
+		        		var_dump($data['ts_sponsor_deals']);
 		        	?>
 		        </td>
 
