@@ -53,8 +53,9 @@
 		            <td>
 		            	<?php
 		            		$i = 0;
+		            		foreach($ts_sponsor_deals as $index => $activ)
+		            		{
 		            	?>
-		            	@foreach($ts_sponsor_deals as $index => $activ)
 				            <?php
 				            	if($i == 1) 
 				            	{
@@ -81,6 +82,9 @@
 				            	}
 				            	$i++;
 				            ?>
+				        <?php
+				        	}
+				        ?>
 				        @endforeach
 				       
 		            </td>
