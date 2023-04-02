@@ -57,16 +57,17 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            	$counter = 0;
+		            	
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
-		            			if( $counter == 0 ) 
-		            			{
+		            			
 		            	?>
 				            <?php
-
+				            	$counter = 0;
 					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
 					            	{
+					            		if( $counter == 0 ) 
+		            					{
 				            		
 				            ?>
 				        <br>
@@ -76,16 +77,20 @@
 				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
 				      	<br>       
 				            <?php
+				            			}
 					            	}
 					            	else if(strval($activ['id_sponsor']) != strval($data->id)) 
 					            	{	
+					            		if( $counter == 0 ) 
+		            					{
 				            ?>
 				        <br>
 		            	<center><label>Not yet deal progress</label></center>
 		            	<br>
 				            <?php
+				            			}
 				            		}
-				            	}
+				            
 				            	$counter = $counter + 1;
 				            ?>
 				        <?php
