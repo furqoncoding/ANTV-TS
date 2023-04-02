@@ -62,12 +62,22 @@
 		            {
 		            ?>
 
-						<?php
-							$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
-								return $element['id_sponsor'] == $data->id;
-							});
-							echo 'qqqqq';
-						?>	            	
+		            	<?php
+		            		foreach($ts_sponsor_deals as $index => $activ)
+		            		{
+		            	?>
+				            <?php	
+					           	if($activ['id_sponsor'] == $data->id) 
+					            {		
+					            	echo 'tesssssss';
+				            ?>
+				        
+				            <?php	
+				            	}
+				            ?>
+				        <?php
+				        	}
+				        ?>
 
 				    <?php
 				    }
