@@ -52,11 +52,12 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            		$first = array_shift($ts_sponsor_deals);
+		            		$i = 0;
 		            	?>
 		            	@foreach($ts_sponsor_deals as $index => $activ)
 				            <?php
-				            	
+				            	if($i == 0) 
+				            	{
 					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
 					            	{
 				            		
@@ -77,12 +78,11 @@
 		            	<br>
 				            <?php
 				            		}
-				            	
+				            	}
+				            	$i++;
 				            ?>
 				        @endforeach
-				        <?php
-				        	array_unshift($ts_sponsor_deals, $first);
-				        ?>
+				       
 		            </td>
 		        </tr>
         @endforeach
