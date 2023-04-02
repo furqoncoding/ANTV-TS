@@ -1,54 +1,80 @@
 <html>
 
 <head>
-	<style type="text/css">
-		#myInput {
-		  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-		  background-position: 10px 12px; /* Position the search icon */
-		  background-repeat: no-repeat; /* Do not repeat the icon image */
-		  width: 100%; /* Full-width */
-		  font-size: 16px; /* Increase font-size */
-		  padding: 12px 20px 12px 40px; /* Add some padding */
-		  border: 1px solid #ddd; /* Add a grey border */
-		  margin-bottom: 12px; /* Add some space below the input */
-		}
-
-		#myTable {
-		  border-collapse: collapse; /* Collapse borders */
-		  width: 100%; /* Full-width */
-		  border: 1px solid #ddd; /* Add a grey border */
-		  font-size: 18px; /* Increase font-size */
-		}
-
-		#myTable th, #myTable td {
-		  text-align: left; /* Left-align text */
-		  padding: 12px; /* Add padding */
-		}
-
-		#myTable tr {
-		  /* Add a bottom border to all table rows */
-		  border-bottom: 1px solid #ddd;
-		}
-
-		#myTable tr.header, #myTable tr:hover {
-		  /* Add a grey background color to the table header and on hover */
-		  background-color: #f1f1f1;
-		}
-
-
-		.th {
-			font-size: 10px;
-		}
-		.td {
-			font-size: 10px;
-		}
-	</style>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table{
+            width: 100%;
+        }
+        tr{
+            width: 100%;
+        }
+        td{
+            background-color: coral;
+            text-align: center;
+        }
+        .search-box{
+            background-color: cornflowerblue;
+            padding: 10px;
+        }
+        input{
+            padding: 7px 15px;
+            border: 1px solid #00000022;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 
 
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
+	<div class="search-box">
+        <input type="text" placeholder="دنبال چی میگردی؟" onkeyup="gosearch(this)">
+    </div>
+    <table>
+        <tr class="table-row" data-search="علی فاضلی 09123456789">
+            <td>1</td>
+            <td>علی فاضلی</td>
+            <td>09123456789</td>
+        </tr>
+        <tr class="table-row" data-search="علی حاضری 09254789658">
+            <td>2</td>
+            <td>علی حاضری</td>
+            <td>09254789658</td>
+        </tr>
+        <tr class="table-row" data-search="محمد جمالی 09363547485">
+            <td>3</td>
+            <td>محمد جمالی</td>
+            <td>09363547485</td>
+        </tr>
+        <tr class="table-row" data-search="حسین ولیزاده 09164786597">
+            <td>4</td>
+            <td>حسین ولیزاده</td>
+            <td>09164786597</td>
+        </tr>
+        <tr class="table-row" data-search="قاسم ترابی 09147852369">
+            <td>5</td>
+            <td>قاسم ترابی</td>
+            <td>09147852369</td>
+        </tr>
+    </table>
+    <div id="searchCode"></div>
+    <script>
+        function gosearch(e){
+            if(e.value==""){
+                // Clear search
+                document.getElementById("searchCode").innerHTML="";
+            }
+            else{
+                document.getElementById("searchCode").innerHTML="<style>.table-row{display:none;}.table-row[data-search*='" + e.value + "']{display:table-row;}</style>";
+            }
+        }
+    </script>
 
+    <br>
+    <br>>
+    
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 	<table id="myTable">
 		<thead>
