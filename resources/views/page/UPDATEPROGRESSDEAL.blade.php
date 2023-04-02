@@ -48,10 +48,7 @@
 	            </td>
 	            
 	            <td>
-		        	<?php
-		        		var_dump($data['ts_sponsor_deals']);
-		        		
-		        	?>
+		        	
 		        </td>
 
 	        </tr>
