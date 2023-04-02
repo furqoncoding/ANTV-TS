@@ -69,7 +69,7 @@
 				            <?php	
 					           	if($activ['id_sponsor'] == $data->id) 
 					            {
-				            		echo 'DEALS';
+				            		echo $activ['sales_name'];
 				            	}
 				            ?>
 
