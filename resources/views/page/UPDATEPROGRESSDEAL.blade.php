@@ -148,7 +148,8 @@
 			      <td><center>{{$data->no_paket}}</center></td>
 			      <td>
 			      	<center>{{$data->planned_name}}</center>
-			      	<center>{{$data->planned_email}}</center>
+			      	<br>
+			      	<center><h5>{{$data->planned_email}}</h5></center>
 			      </td>
 			      <td><center>{{$data->agency}}</center></td>
 			      <td><center>{{$data->advertiser_product}}</center></td>
