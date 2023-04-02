@@ -213,9 +213,9 @@ class PageController extends Controller
                 'update_date'=>$date_now,
                 'no_paket'=>$request->nomor_paket,
                 'no_media_order'=>$request->no_media_order,
-                'employee_id'=>$my_array_data['employee_id'],
-                'employee_name'=>$my_array_data['name'],
-                'employee_email'=>$my_array_data['email'],
+                'planned_id'=>$my_array_data['employee_id'],
+                'planned_name'=>$my_array_data['name'],
+                'planned_email'=>$my_array_data['email'],
                 'agency'=>$request->agency,
                 'advertiser_product'=>$request->advertiser_product
             )

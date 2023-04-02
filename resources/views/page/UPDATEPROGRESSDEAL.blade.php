@@ -144,14 +144,11 @@
 
 			@foreach($data['ts_sponsor_deals'] as $key => $data)
 			    <tr>
-			        
-			      
-			      
 			      <td><center>{{$data->no_media_order}}</center></td>
 			      <td><center>{{$data->no_paket}}</center></td>
 			      <td>
-			      	<center>{{$data->employee_name}}</center>
-			      	<center>{{$data->employee_email}}</center>
+			      	<center>{{$data->planned_name}}</center>
+			      	<center>{{$data->planned_email}}</center>
 			      </td>
 			      <td><center>{{$data->agency}}</center></td>
 			      <td><center>{{$data->advertiser_product}}</center></td>
