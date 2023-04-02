@@ -54,9 +54,12 @@
 		            <td>
 		            	<?php
 		            		$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
-							   return $element['id_sponsor'] == $data->id;
+							   return $element['id'] == 1;
 							});
-		            		foreach($filtered_array_ts_sponsor_deals as $index => $activ)
+
+							echo $data['id'];
+
+		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
 				            <?php
