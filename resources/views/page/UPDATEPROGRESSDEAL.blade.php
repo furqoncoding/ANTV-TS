@@ -59,8 +59,7 @@
 		            	<center><label>{{$activ['sales_name']}}</label></center>
 				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
 				      	<br>       
-				            @endif
-				            @elseif($data->id != $activ['id_sponsor']) 
+				            @if($data->id != $activ['id_sponsor']) 
 				        <br>
 		            	<center><label>Not yet deal progress</label></center>
 		            	<br>
