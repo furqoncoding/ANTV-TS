@@ -29,6 +29,9 @@
 
 
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
+	<?php
+		        		var_dump($data['ts_sponsor_deals']);
+		        	?>
 	<div class="search-box">
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
@@ -48,9 +51,7 @@
 	            </td>
 	            
 	            <td>
-		        	<?php
-		        		var_dump($data['ts_sponsor_deals']);
-		        	?>
+		        	
 		        </td>
 
 	        </tr>
