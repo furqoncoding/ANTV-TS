@@ -31,6 +31,7 @@
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
 	<?php
 		$ts_sponsor_deals = json_decode(json_encode($data['ts_sponsor_deals']), true);
+		$ts_sponsor = json_decode(json_encode($data['ts_sponsor']), true);
 		
 		$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
 			return $element['id_sponsor'] == 1;
@@ -40,23 +41,23 @@
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
-    	@foreach($data['ts_sponsor'] as $key => $data)
+    	@foreach($ts_sponsor as $key => $data)
 		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product.$data->no_media_order; ?>">
 		            <td>
 		            	<br>
 		            	<center><label>PLANNED</label></center>
 		            	<br>
-		            	<center><label>{{$data->planned_name}}</label></center>
-				      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
+		            	<center><label>{{$data['planned_name']}}</label></center>
+				      	<center><h5 style="margin-top: 9px;">{{$data['planned_email']}}</h5></center>
 				      	<br>
 		            </td>
-		            <td><center><label>{{$data->no_paket}}</label></center></td>
-		            <td><center><label>{{$data->no_media_order}}</label></center></td>
-		            <td><center><label>{{$data->agency}}</label></center></td>
-		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
+		            <td><center><label>{{$data['no_paket']}}</label></center></td>
+		            <td><center><label>{{$data['no_media_order']}}</label></center></td>
+		            <td><center><label>{{$data['agency']}}</label></center></td>
+		            <td><center><label>{{$data['advertiser_product']}}</label></center></td>
 		            <td>
 		            	<?php
-		            	if( !next($data['ts_sponsor']) ) {
+		            	if( !next($ts_sponsor) ) {
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
