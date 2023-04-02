@@ -39,7 +39,7 @@ class PageController extends Controller
         $data = array(
             'ts_sponsor' => $ts_sponsor,
             'ts_sponsor_deals' => $ts_sponsor_deals,
-            'menu'=> 'UPDATEPROGRESSDEAL'
+            'menu'=> ''
         );
         return view('page.index')->with('data', $data);
     }

@@ -1084,7 +1084,7 @@
 
                             <form action="{{action('PageController@prog_logout')}}" method="POST">
                                 {{ csrf_field() }}
-                                <button type="submit" style="width: 30px;height: 30px;border-radius: 23px;">
+                                <button type="submit" style="width: 30px;height: 30px;border-radius: 23px;cursor: pointer;">
                                     <i class="fas fa-power-off"></i>
                                 </button>
                             </form>
