@@ -30,31 +30,35 @@
 
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
 	<?php
-		        		var_dump($data['ts_sponsor_deals']);
-		        	?>
+
+	?>
 	<div class="search-box">
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
-    	@foreach($data['ts_sponsor'] as $key => $data)
-	        <tr class="table-row" data-search="<?php echo $data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email; ?>">
-	            
-	            <td><center><label>{{$data->no_media_order}}</label></center></td>
-	            <td><center><label>{{$data->no_paket}}</label></center></td>
-	            <td>
-	            	<br>
-	            	<center><label>PLANNED</label></center>
-	            	<br>
-	            	<center><label>{{$data->planned_name}}</label></center>
-			      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
-			      	<br>
-	            </td>
-	            
-	            <td>
-		        	
-		        </td>
+    	@foreach($data['ts_sponsor_deals'] as $key => $ts_sponsor_deals)
+    		@foreach($data['ts_sponsor'] as $key => $ts_sponsor)
+    			if($ts_sponsor_deals->id_sponsor == $ts_sponsor->id)
+		        <tr class="table-row" data-search="<?php echo $data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email; ?>">
+		            
+		            <td><center><label>{{$ts_sponsor->no_media_order}}</label></center></td>
+		            <td><center><label>{{$ts_sponsor->no_paket}}</label></center></td>
+		            <td>
+		            	<br>
+		            	<center><label>PLANNED</label></center>
+		            	<br>
+		            	<center><label>{{$ts_sponsor->planned_name}}</label></center>
+				      	<center><h5 style="margin-top: 9px;">{{$ts_sponsor->planned_email}}</h5></center>
+				      	<br>
+		            </td>
+		            
+		            <td>
+			        	
+			        </td>
 
-	        </tr>
+		        </tr>
+		        @endif
+	        @endforeach
         @endforeach
     </table>
     <div id="searchCode"></div>
