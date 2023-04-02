@@ -50,6 +50,13 @@
 		            <td><center><label>{{$data->no_media_order}}</label></center></td>
 		            <td><center><label>{{$data->agency}}</label></center></td>
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
+		            <td>
+		            	@foreach($data['ts_sponsor_deals'] as $activ)
+				            @if($data->id_sponsor == $activ->id) 
+				                <?php echo 'tesssss'; ?>
+				            @endif
+				        @endforeach
+		            </td>
 		        </tr>
         @endforeach
     </table>
