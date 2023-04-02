@@ -32,9 +32,7 @@
 	<?php
 		$ts_sponsor_deals = json_decode(json_encode($data['ts_sponsor_deals']), true);
 		
-		$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
-			return $element['id'] == 1;
-		});
+		
 	?>
 	<div class="search-box">
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
@@ -58,7 +56,10 @@
 		            	<?php
 		            		
 
-							echo $data->id;
+							$id = $data->id;
+							$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
+								return $element['id'] == $id;
+							});
 
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
