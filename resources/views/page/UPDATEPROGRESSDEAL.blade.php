@@ -53,7 +53,7 @@
 		            <td>
 		            	@foreach($ts_sponsor_deals as $activ)
 				            <?php
-				            	if(strval($activ['id_sponsor']) == strval($data[0]->id)) 
+				            	if(strval($activ['id_sponsor']) == strval($data->id)) 
 				            	{
 				            		
 				            ?>
@@ -65,7 +65,7 @@
 				      	<br>       
 				            <?php
 				            	}
-				            	else if(strval($activ['id_sponsor']) != strval($data[0]->id)) 
+				            	if(strval($activ['id_sponsor']) != strval($data->id)) 
 				            	{
 				            		
 				            ?>
