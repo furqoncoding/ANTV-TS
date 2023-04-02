@@ -34,14 +34,8 @@
     </div>
     <table>
     	@foreach($data['ts_sponsor'] as $key => $data)
-	        <tr class="table-row" data-search="<?php echo $data->status_deals.$data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email.$data->sales_name.$data->sales_email; ?>">
-	            <td>
-	            	<center>
-			      		<label>
-			      			{{$data->status_deals}}
-			      		</label>
-			      	</center>
-	            </td>
+	        <tr class="table-row" data-search="<?php echo $data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email.$data->sales_name.$data->sales_email; ?>">
+	            
 	            <td><center><label>{{$data->no_media_order}}</label></center></td>
 	            <td><center><label>{{$data->no_paket}}</label></center></td>
 	            <td>
@@ -52,14 +46,7 @@
 			      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
 			      	<br>
 	            </td>
-	            <td>
-	            	<br>
-	            	<center><label>SALES</label></center>
-	            	<br>
-	            	<center><label>{{$data->sales_name}}</label></center>
-			      	<center><h5 style="margin-top: 9px;">{{$data->sales_email}}</h5></center>
-			      	<br>
-	            </td>
+	            
 	        </tr>
         @endforeach
     </table>
