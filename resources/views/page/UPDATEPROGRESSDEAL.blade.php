@@ -72,24 +72,26 @@
 			      	<center><h5>{{$data->planned_email}}</h5></center>
 			      </td>
 			      <td>
-			      	<label>{{$data->agency}}</label>
-			      	<label>{{$data->advertiser_product}}</label>
+
+			      	<h5>{{$data->agency}}</h5>
+			      	<h5>{{$data->advertiser_product}}</h5>
 			      	
-			      		<label>
+			      		<h5>
 			      		{{$data->start_periode}} - {{$data->end_periode}}
-			      		</label>
+			      		</h5>
 			      	
-			      		<label>
+			      		<h5>
 			      		{{$data->budget_deals}}
-			      		</label>
+			      		</h5>
 			      	
 			      	<br>
 			      	<h5>{{$data->ket_budget_deals}}</h5>
-			      	<label>{{$data->net_deals_per_eps}}</label>
-			      	<label>{{$data->eps}}</label>
-			      	<label>{{$data->type_paket}}</label>
-			      	<label>{{$data->program}}</label>
-			      	<label>{{$data->status_deals}}</label>
+			      	<h5>{{$data->net_deals_per_eps}}</h5>
+			      	<h5>{{$data->eps}}</h5>
+			      	<h5>{{$data->type_paket}}</h5>
+			      	<h5>{{$data->program}}</h5>
+			      	<h5>{{$data->status_deals}}</h5>
+			      	
 			      </td>
 			 
 			    </tr>
