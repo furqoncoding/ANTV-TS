@@ -57,7 +57,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            	if( !next($data) ) {
+		            	if( !next($key) ) {
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
