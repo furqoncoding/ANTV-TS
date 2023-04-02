@@ -42,7 +42,7 @@
     </div>
     <table>
     	<?php
-    		$counter = 0;
+    		
     	?>
     	@foreach($data['ts_sponsor'] as $key => $data)
 		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product.$data->no_media_order; ?>">
@@ -60,6 +60,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
+		            		$counter = 0;
 						    if( $counter == 0 ) 
 				            {
 				            	echo 'tessss';
