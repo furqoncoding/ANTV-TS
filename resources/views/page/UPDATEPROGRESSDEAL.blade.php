@@ -38,7 +38,7 @@
     <table>
     	@foreach($data['ts_sponsor_deals'] as $key => $ts_sponsor_deals)
     		@foreach($data['ts_sponsor'] as $key => $ts_sponsor)
-    			if($ts_sponsor_deals->id_sponsor == $ts_sponsor->id)
+    			@if($ts_sponsor_deals->id_sponsor == $ts_sponsor->id)
 		        <tr class="table-row" data-search="<?php echo $data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email; ?>">
 		            
 		            <td><center><label>{{$ts_sponsor->no_media_order}}</label></center></td>
