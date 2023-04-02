@@ -48,7 +48,7 @@
 	            </td>
 	            
 	            <td>
-		            @foreach($data['ts_sponsor_deals'] as $key => $data_sponsor_deals)
+		           <!--  @foreach($data['ts_sponsor_deals'] as $key => $data_sponsor_deals)
 		            	@if($data_sponsor_deals->id_sponsor == $data->id)
 		            	<td>
 			            	<br>
@@ -59,7 +59,7 @@
 					      	<br>
 			            </td>
 			            @endif
-		            @endforeach
+		            @endforeach -->
 		        </td>
 
 	        </tr>
