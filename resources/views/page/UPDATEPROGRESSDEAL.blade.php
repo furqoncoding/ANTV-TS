@@ -73,25 +73,25 @@
 			      </td>
 			      <td>
 
-			      	<h5>{{$data->agency}}</h5>
-			      	<h5>{{$data->advertiser_product}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->agency}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->advertiser_product}}</h5>
 			      	
-			      		<h5>
+			      		<h5 style="font-size: 6px;">
 			      		{{$data->start_periode}} - {{$data->end_periode}}
 			      		</h5>
 			      	
-			      		<h5>
+			      		<h5 style="font-size: 6px;">
 			      		{{$data->budget_deals}}
 			      		</h5>
 			      	
 			      	<br>
-			      	<h5>{{$data->ket_budget_deals}}</h5>
-			      	<h5>{{$data->net_deals_per_eps}}</h5>
-			      	<h5>{{$data->eps}}</h5>
-			      	<h5>{{$data->type_paket}}</h5>
-			      	<h5>{{$data->program}}</h5>
-			      	<h5>{{$data->status_deals}}</h5>
-			      	
+			      	<h5 style="font-size: 6px;">{{$data->ket_budget_deals}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->net_deals_per_eps}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->eps}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->type_paket}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->program}}</h5>
+			      	<h5 style="font-size: 6px;">{{$data->status_deals}}</h5>
+
 			      </td>
 			 
 			    </tr>
