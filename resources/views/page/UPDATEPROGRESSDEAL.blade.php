@@ -58,7 +58,7 @@
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            			$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
-									return $element['id_sponsor'] == 1;
+									return $element['id_sponsor'] == $id;
 								});
 								echo $id;
 		            	?>
