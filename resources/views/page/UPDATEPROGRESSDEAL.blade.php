@@ -11,7 +11,7 @@
             width: 100%;
         }
         td{
-            background-color: grey;
+            background-color: #F8F8FF;
             text-align: center;
         }
         .search-box{
