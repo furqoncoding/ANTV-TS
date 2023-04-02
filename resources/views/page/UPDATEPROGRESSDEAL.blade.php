@@ -11,7 +11,7 @@
             width: 100%;
         }
         td{
-            background-color: white;
+            background-color: grey;
             text-align: center;
         }
         .search-box{
@@ -47,15 +47,13 @@
 	            <td>
 	            	<br>
 	            	<center><label>{{$data->planned_name}}</label></center>
-			      	<br>
-			      	<center><h5>{{$data->planned_email}}</h5></center>
+			      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
 			      	<br>
 	            </td>
 	            <td>
 	            	<br>
 	            	<center><label>{{$data->sales_name}}</label></center>
-			      	<br>
-			      	<center><h5>{{$data->sales_email}}</h5></center>
+			      	<center><h5 style="margin-top: 9px;">{{$data->sales_email}}</h5></center>
 			      	<br>
 	            </td>
 	        </tr>
