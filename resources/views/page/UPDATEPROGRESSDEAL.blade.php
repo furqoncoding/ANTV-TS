@@ -46,11 +46,15 @@
 	            <td><center><label>{{$data->no_paket}}</label></center></td>
 	            <td>
 	            	<br>
+	            	<center><label>PLANNED</label></center>
+	            	<br>
 	            	<center><label>{{$data->planned_name}}</label></center>
 			      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
 			      	<br>
 	            </td>
 	            <td>
+	            	<br>
+	            	<center><label>SALES</label></center>
 	            	<br>
 	            	<center><label>{{$data->sales_name}}</label></center>
 			      	<center><h5 style="margin-top: 9px;">{{$data->sales_email}}</h5></center>
@@ -73,7 +77,7 @@
     </script>
 
     <br>
-    <br>>
+    <br>
 
 	
 
