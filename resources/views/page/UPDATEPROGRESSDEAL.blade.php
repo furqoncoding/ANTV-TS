@@ -53,17 +53,24 @@
 	<table id="myTable">
 		<thead>
 			<tr>
+				<th><center><label>Status</label></center></th>
 				<th><center><label>Nomor Media Order</label></center></th>
 				<th><center><label>Nomor Paket</label></center></th>
 				<th><center><label>PLANNED</label></center></th>
-
-				<th><center><label>Details</label></center></th>
+				<th><center><label>SALES</label></center></th>
 			</tr>
 		</thead>
 		<tbody>
 
 			@foreach($data['ts_sponsor_deals'] as $key => $data)
 			    <tr>
+			      <td>
+			      	<center>
+			      		<label>
+			      			{{$data->status_deals}}
+			      		</label>
+			      	</center>
+			      </td>
 			      <td><center><label>{{$data->no_media_order}}</label></center></td>
 			      <td><center><label>{{$data->no_paket}}</label></center></td>
 			      <td>
@@ -72,28 +79,10 @@
 			      	<center><h5>{{$data->planned_email}}</h5></center>
 			      </td>
 			      <td>
-
-			      	<h5 style="font-size: 6px;">{{$data->agency}}</h5>
-			      	<h5 style="font-size: 6px;">{{$data->advertiser_product}}</h5>
-			      	
-			      		<h5 style="font-size: 6px;">
-			      		{{$data->start_periode}} - {{$data->end_periode}}
-			      		</h5>
-			      	
-			      		<h5 style="font-size: 6px;">
-			      		{{$data->budget_deals}}
-			      		</h5>
-			      	
+			      	<center><label>{{$data->sales_name}}</label></center>
 			      	<br>
-			      	<h5 style="font-size: 6px;">{{$data->ket_budget_deals}}</h5>
-			      	<h5 style="font-size: 6px;">{{$data->net_deals_per_eps}}</h5>
-			      	<h5 style="font-size: 6px;">{{$data->eps}}</h5>
-			      	<h5 style="font-size: 6px;">{{$data->type_paket}}</h5>
-			      	<h5 style="font-size: 6px;">{{$data->program}}</h5>
-			      	<h5 style="font-size: 6px;">{{$data->status_deals}}</h5>
-
+			      	<center><h5>{{$data->sales_email}}</h5></center>
 			      </td>
-			 
 			    </tr>
 			@endforeach
 			
