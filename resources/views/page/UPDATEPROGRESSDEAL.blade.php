@@ -47,6 +47,21 @@
 			      	<br>
 	            </td>
 	            
+	            <td>
+		            @foreach($data['ts_sponsor_deals'] as $key => $data_sponsor_deals)
+		            	@if($data_sponsor_deals->id_sponsor == $data->id)
+		            	<td>
+			            	<br>
+			            	<center><label>PLANNED</label></center>
+			            	<br>
+			            	<center><label>{{$data->planned_name}}</label></center>
+					      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
+					      	<br>
+			            </td>
+			            @endif
+		            @endforeach
+		        </td>
+
 	        </tr>
         @endforeach
     </table>
