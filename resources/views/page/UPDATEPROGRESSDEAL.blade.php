@@ -56,7 +56,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            		foreach($ts_sponsor_deals[0] as $index => $activ)
+		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
 				            <?php
