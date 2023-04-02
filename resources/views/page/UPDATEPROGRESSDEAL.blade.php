@@ -53,7 +53,7 @@
 		            <td>
 		            	@foreach($ts_sponsor_deals as $activ)
 				            <?php
-				            	if($data->id == $activ['id_sponsor']) 
+				            	if($activ['id_sponsor'] == $data->id) 
 				            	{
 				            ?>
 				        <br>
@@ -64,7 +64,7 @@
 				      	<br>       
 				            <?php
 				            	}
-				            	else if($data->id != $activ['id_sponsor']) 
+				            	else if($activ['id_sponsor'] != $data->id) 
 				            	{
 				            ?>
 				        <br>
