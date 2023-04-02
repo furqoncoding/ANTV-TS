@@ -31,6 +31,10 @@
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
 	<?php
 		$ts_sponsor_deals = json_decode(json_encode($data['ts_sponsor_deals']), true);
+		$filtered_array = array_filter($ts_sponsor_deals, function($element) {
+		   return $element > 0;
+		});
+		var_dump($filtered_array);
 	?>
 	<div class="search-box">
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
