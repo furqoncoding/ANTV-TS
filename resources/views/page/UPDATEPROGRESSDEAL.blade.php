@@ -49,14 +49,8 @@
 	            
 	            <td>
 		        	<?php
-		        		<!-- $ts_sponsor_deals = json_decode($data['ts_sponsor_deals'], true); -->
 		        		var_dump($data['ts_sponsor_deals']);
-		        		<!-- foreach ($ts_sponsor_deals as $ts_sponsor_deals) {
-		        			if($ts_sponsor_deals->id_sponsor == $data->id)
-		        			{
-		        				echo "tes";
-		        			}
-		        		} -->
+		        		
 		        	?>
 		        </td>
 
