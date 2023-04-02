@@ -36,19 +36,19 @@
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
-    	@foreach($data['ts_sponsor'] as $key => $ts_sponsor)
+    	@foreach($data['ts_sponsor'] as $key => $data)
 		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product; ?>">
 		            <td>
 		            	<br>
 		            	<center><label>PLANNED</label></center>
 		            	<br>
-		            	<center><label>{{$ts_sponsor->planned_name}}</label></center>
-				      	<center><h5 style="margin-top: 9px;">{{$ts_sponsor->planned_email}}</h5></center>
+		            	<center><label>{{$data->planned_name}}</label></center>
+				      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
 				      	<br>
 		            </td>
-		            <td><center><label>{{$ts_sponsor->no_paket}}</label></center></td>
-		            <td><center><label>{{$ts_sponsor->agency}}</label></center></td>
-		            <td><center><label>{{$ts_sponsor->advertiser_product}}</label></center></td>
+		            <td><center><label>{{$data->no_paket}}</label></center></td>
+		            <td><center><label>{{$data->agency}}</label></center></td>
+		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		        </tr>
         @endforeach
     </table>
