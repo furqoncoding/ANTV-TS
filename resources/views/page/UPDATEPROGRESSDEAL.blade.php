@@ -54,9 +54,9 @@
 		            	<?php
 		            		$first = true;
 		            	?>
-		            	@foreach($ts_sponsor_deals as $activ)
+		            	@foreach($ts_sponsor_deals as $index => $activ)
 				            <?php
-				            	if ( $first )
+				            	if ( $index == 0 )
     							{
 					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
 					            	{
