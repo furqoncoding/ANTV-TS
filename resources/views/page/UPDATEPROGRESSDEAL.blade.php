@@ -56,6 +56,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
+		            	if( !next($data['ts_sponsor']) ) {
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
@@ -85,6 +86,7 @@
 				            ?>
 				        <?php
 				        	}
+				        }
 				        ?>
 				       
 		            </td>
