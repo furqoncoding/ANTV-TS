@@ -36,9 +36,7 @@
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
-    	@foreach($data['ts_sponsor_deals'] as $key => $ts_sponsor_deals)
-    		@foreach($data['ts_sponsor'] as $key => $ts_sponsor)
-    			@if($ts_sponsor_deals->id_sponsor == $ts_sponsor->id)
+    	@foreach($data['ts_sponsor'] as $ts_sponsor)
 		        <tr class="table-row" data-search="<?php echo $data->no_media_order.$data->no_paket.$data->planned_name.$data->planned_email; ?>">
 		            
 		            <td><center><label>{{$ts_sponsor->no_media_order}}</label></center></td>
@@ -57,8 +55,6 @@
 			        </td>
 
 		        </tr>
-		        @endif
-	        @endforeach
         @endforeach
     </table>
     <div id="searchCode"></div>
