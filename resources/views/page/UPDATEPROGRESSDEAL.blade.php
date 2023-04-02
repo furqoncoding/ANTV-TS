@@ -56,8 +56,8 @@
 				        <br>
 		            	<center><label>SALES</label></center>
 		            	<br>
-		            	<center><label>{{$data->sales_name}}</label></center>
-				      	<center><h5 style="margin-top: 9px;">{{$data->sales_email}}</h5></center>
+		            	<center><label>{{$activ['sales_name']}}</label></center>
+				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
 				      	<br>       
 				            @endif
 				            @if($data->id != $activ['id_sponsor']) 
