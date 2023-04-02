@@ -52,7 +52,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            		$first = true;
+		            		$first = array_shift($ts_sponsor_deals);
 		            	?>
 		            	@foreach($ts_sponsor_deals as $index => $activ)
 				            <?php
@@ -81,6 +81,9 @@
 				            	}
 				            ?>
 				        @endforeach
+				        <?php
+				        	array_unshift($ts_sponsor_deals, $first);
+				        ?>
 		            </td>
 		        </tr>
         @endforeach
