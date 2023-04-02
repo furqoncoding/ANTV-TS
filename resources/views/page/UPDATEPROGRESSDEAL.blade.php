@@ -62,34 +62,12 @@
 		            {
 		            ?>
 
-		            	<?php
-		            		foreach($ts_sponsor_deals as $index => $activ)
-		            		{
-		            	?>
-				            <?php	
-					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
-					            	{		
-				            ?>
-				        <br>
-		            	<center><label>SALES</label></center>
-		            	<br>
-		            	<center><label>{{$activ['sales_name']}}</label></center>
-				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
-				      	<br>       
-				            <?php	
-					            	}
-					            	else if(strval($activ['id_sponsor']) != strval($data->id)) 
-					            	{		
-				            ?>
-				        <br>
-		            	<center><label>Not yet deal progress</label></center>
-		            	<br>
-				            <?php	
-				            		}
-				            ?>
-				        <?php
-				        	}
-				        ?>
+						<?php
+							$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
+								return $element['id_sponsor'] == $data->id;
+							});
+							echo 'qqqqq';
+						?>	            	
 
 				    <?php
 				    }
