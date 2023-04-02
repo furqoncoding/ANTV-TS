@@ -34,6 +34,14 @@
 		  /* Add a grey background color to the table header and on hover */
 		  background-color: #f1f1f1;
 		}
+
+
+		.th {
+			font-size: 10px;
+		}
+		.td {
+			font-size: 10px;
+		}
 	</style>
 </head>
 
