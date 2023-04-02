@@ -48,7 +48,12 @@
 	            </td>
 	            
 	            <td>
-		           
+		        	<?php
+		        		$new_array = array_filter($data['ts_sponsor_deals'], function($var) use ($data->id){
+						    return ($var['id_sponsor'] == $data->id);
+						});
+						var_dump($new_array);
+		        	?>
 		        </td>
 
 	        </tr>
