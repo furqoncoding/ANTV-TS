@@ -85,7 +85,6 @@
 				        <?php
 				        	}
 				        ?>
-				        @endforeach
 				       
 		            </td>
 		        </tr>
