@@ -51,7 +51,7 @@
 		            <td><center><label>{{$data->agency}}</label></center></td>
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
-		            	@foreach($ts_sponsor_deals as $keyy => $activ)
+		            	@foreach($ts_sponsor_deals as $activ)
 				            <?php
 				            	if($data->id == $activ['id_sponsor']) 
 				            	{
