@@ -49,10 +49,12 @@
 	            
 	            <td>
 		        	<?php
-		        		$new_array = array_filter($data['ts_sponsor_deals'], function($var) use ($data->id){
-						    return ($var['id_sponsor'] == $data->id);
-						});
-						var_dump($new_array);
+		        		foreach ($data['ts_sponsor_deals'] as $ts_sponsor_deals) {
+		        			if($ts_sponsor_deals->id_sponsor == $data->id)
+		        			{
+		        				echo "tes";
+		        			}
+		        		}
 		        	?>
 		        </td>
 
