@@ -52,13 +52,11 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            		$i = 0;
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
 		            	?>
 				            <?php
-				            	if($i == 1) 
-				            	{
+				            	
 					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
 					            	{
 				            		
@@ -79,8 +77,7 @@
 		            	<br>
 				            <?php
 				            		}
-				            	}
-				            	$i++;
+				            	
 				            ?>
 				        <?php
 				        	}
