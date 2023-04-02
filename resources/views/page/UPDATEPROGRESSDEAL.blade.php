@@ -57,11 +57,13 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	<?php
-		            	$counter = 0;
-				        if( $counter == 0 ) 
-		            	{
+		            	
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
+
+		            			$counter = 0;
+						        if( $counter == 0 ) 
+				            	{
 		            			
 		            	?>
 				            <?php
@@ -91,11 +93,13 @@
 				            			
 				            		}
 				            	
+				            	}
+
 				            ?>
 				        <?php
 				        	}
 				        
-				        }
+				        
 				        $counter = $counter + 1;
 				        ?>
 				       
