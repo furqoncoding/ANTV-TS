@@ -37,7 +37,7 @@
     </div>
     <table>
     	@foreach($data['ts_sponsor'] as $key => $data)
-		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product; ?>">
+		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product.$data->no_media_order; ?>">
 		            <td>
 		            	<br>
 		            	<center><label>PLANNED</label></center>
@@ -47,6 +47,7 @@
 				      	<br>
 		            </td>
 		            <td><center><label>{{$data->no_paket}}</label></center></td>
+		            <td><center><label>{{$data->no_media_order}}</label></center></td>
 		            <td><center><label>{{$data->agency}}</label></center></td>
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		        </tr>
