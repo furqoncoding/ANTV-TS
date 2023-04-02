@@ -138,6 +138,13 @@
 				<th><center>PLANNED</center></th>
 				<th><center>Agency</center></th>
 				<th><center>Advertiser Product</center></th>
+				<th><center>Periode</center></th>
+				<th><center>Budget Deals</center></th>
+				<th><center>Net Deals</center></th>
+				<th><center>Eps</center></th>
+				<th><center>Type Paket</center></th>
+				<th><center>Program</center></th>
+				<th><center>Status Deals</center></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -153,6 +160,23 @@
 			      </td>
 			      <td><center>{{$data->agency}}</center></td>
 			      <td><center>{{$data->advertiser_product}}</center></td>
+			      <td>
+			      	<center>
+			      		{{$data->start_periode}} - {{$data->end_periode}}
+			      	</center>
+			      </td>
+			      <td>
+			      	<center>
+			      		{{$data->budget_deals}}
+			      	</center>
+			      	<br>
+			      	<center><h5>{{$data->ket_budget_deals}}</h5></center>
+			      </td>
+			      <td><center>{{$data->net_deals_per_eps}}</center></td>
+			      <td><center>{{$data->eps}}</center></td>
+			      <td><center>{{$data->type_paket}}</center></td>
+			      <td><center>{{$data->program}}</center></td>
+			      <td><center>{{$data->status_deals}}</center></td>
 			    </tr>
 			@endforeach
 			
