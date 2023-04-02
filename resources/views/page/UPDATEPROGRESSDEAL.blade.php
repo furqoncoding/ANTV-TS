@@ -51,10 +51,15 @@
 		            <td><center><label>{{$data->agency}}</label></center></td>
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
-		            	@foreach($ts_sponsor_deals[0] as $activ)
+		            	<?php
+		            		$first = true;
+		            	?>
+		            	@foreach($ts_sponsor_deals as $activ)
 				            <?php
-				            	if(strval($activ['id_sponsor']) == strval($data->id)) 
-				            	{
+				            	if ( $first )
+    							{
+					            	if(strval($activ['id_sponsor']) == strval($data->id)) 
+					            	{
 				            		
 				            ?>
 				        <br>
@@ -64,15 +69,15 @@
 				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
 				      	<br>       
 				            <?php
-				            	}
-				            	if(strval($activ['id_sponsor']) != strval($data->id)) 
-				            	{
-				            		
+					            	}
+					            	if(strval($activ['id_sponsor']) != strval($data->id)) 
+					            	{	
 				            ?>
 				        <br>
 		            	<center><label>Not yet deal progress</label></center>
 		            	<br>
 				            <?php
+				            		}
 				            	}
 				            ?>
 				        @endforeach
