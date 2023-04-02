@@ -11,11 +11,11 @@
             width: 100%;
         }
         td{
-            background-color: coral;
+            background-color: white;
             text-align: center;
         }
         .search-box{
-            background-color: cornflowerblue;
+            background-color: black;
             padding: 10px;
         }
         input{
@@ -45,14 +45,18 @@
 	            <td><center><label>{{$data->no_media_order}}</label></center></td>
 	            <td><center><label>{{$data->no_paket}}</label></center></td>
 	            <td>
+	            	<br>
 	            	<center><label>{{$data->planned_name}}</label></center>
 			      	<br>
 			      	<center><h5>{{$data->planned_email}}</h5></center>
+			      	<br>
 	            </td>
 	            <td>
+	            	<br>
 	            	<center><label>{{$data->sales_name}}</label></center>
 			      	<br>
 			      	<center><h5>{{$data->sales_email}}</h5></center>
+			      	<br>
 	            </td>
 	        </tr>
         @endforeach
