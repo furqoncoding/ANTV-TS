@@ -57,7 +57,9 @@
 		            		
 
 							$id = $data->id;
-							
+							$filtered_array_ts_sponsor_deals = array_filter($ts_sponsor_deals, function($element) {
+								return strval($element['id']) == strval($id);
+							});
 
 
 		            	?>
