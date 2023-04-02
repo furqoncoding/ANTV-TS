@@ -52,18 +52,27 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	@foreach($ts_sponsor_deals as $keyy => $activ)
-				            @if($data->id == $activ['id_sponsor']) 
+				            <?php
+				            	if($data->id == $activ['id_sponsor']) 
+				            	{
+				            ?>
 				        <br>
 		            	<center><label>SALES</label></center>
 		            	<br>
 		            	<center><label>{{$activ['sales_name']}}</label></center>
 				      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
 				      	<br>       
-				            @else
+				            <?php
+				            	}
+				            	else if($data->id != $activ['id_sponsor']) 
+				            	{
+				            ?>
 				        <br>
 		            	<center><label>Not yet deal progress</label></center>
 		            	<br>
-				            @endif
+				            <?php
+				            	}
+				            ?>
 				        @endforeach
 		            </td>
 		        </tr>
