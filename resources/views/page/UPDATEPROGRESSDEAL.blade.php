@@ -52,7 +52,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	@foreach($ts_sponsor_deals as $keyy => $activ)
-				                <?php echo $activ->id_sponsor; ?>
+				                <?php echo $activ->end_periode; ?>
 				        @endforeach
 		            </td>
 		        </tr>
