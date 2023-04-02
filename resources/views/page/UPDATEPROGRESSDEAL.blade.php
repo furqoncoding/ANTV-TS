@@ -55,6 +55,7 @@
 				            <?php
 				            	if($activ['id_sponsor'] == $data->id) 
 				            	{
+				            		echo $data->id;
 				            ?>
 				        <br>
 		            	<center><label>SALES</label></center>
@@ -66,6 +67,7 @@
 				            	}
 				            	else if($activ['id_sponsor'] != $data->id) 
 				            	{
+				            		echo $data->id;
 				            ?>
 				        <br>
 		            	<center><label>Not yet deal progress</label></center>
