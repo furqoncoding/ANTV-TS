@@ -69,14 +69,7 @@
 				            <?php	
 					           	if($activ['id_sponsor'] == $data->id) 
 					            {
-				            		echo "
-				            			<br>
-						            	<center><label>SALES</label></center>
-						            	<br>
-						            	<center><label>{{$activ['sales_name']}}</label></center>
-								      	<center><h5 style='margin-top: 9px;'>{{$activ['sales_email']}}</h5></center>
-								      	<br>
-				            		";
+				            		echo $activ['sales_name'];
 				            	}
 				            ?>
 
