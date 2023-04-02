@@ -31,7 +31,6 @@
 <body style="background-image: linear-gradient(to right, #B22222 8%, #DC143C 38%, #B22222 100%);">
 	<?php
 		$ts_sponsor_deals = json_decode(json_encode($data['ts_sponsor_deals']), true);
-		var_dump($ts_sponsor_deals);
 	?>
 	<div class="search-box">
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
@@ -52,7 +51,11 @@
 		            <td><center><label>{{$data->agency}}</label></center></td>
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
-		            	
+		            	@foreach($ts_sponsor_deals as $keyy => $activ)
+				            @if($data->id_sponsor == $activ->id) 
+				                <?php echo 'tesssss'; ?>
+				            @endif
+				        @endforeach
 		            </td>
 		        </tr>
         @endforeach
