@@ -56,15 +56,8 @@
 				<th><center><label>Nomor Media Order</label></center></th>
 				<th><center><label>Nomor Paket</label></center></th>
 				<th><center><label>PLANNED</label></center></th>
-				<th><center><label>Agency</label></center></th>
-				<th><center><label>Advertiser Product</label></center></th>
-				<th><center><label>Periode</label></center></th>
-				<th><center><label>Budget Deals</label></center></th>
-				<th><center><label>Net Deals</label></center></th>
-				<th><center><label>Eps</label></center></th>
-				<th><center><label>Type Paket</label></center></th>
-				<th><center><label>Program</label></center></th>
-				<th><center><label>Status Deals</label></center></th>
+
+				<th><center><label>Details</label></center></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -78,29 +71,27 @@
 			      	<br>
 			      	<center><h5>{{$data->planned_email}}</h5></center>
 			      </td>
-			      <td><center><label>{{$data->agency}}</label></center></td>
-			      <td><center><label>{{$data->advertiser_product}}</label></center></td>
 			      <td>
-			      	<center>
+			      	<label>{{$data->agency}}</label>
+			      	<label>{{$data->advertiser_product}}</label>
+			      	
 			      		<label>
 			      		{{$data->start_periode}} - {{$data->end_periode}}
 			      		</label>
-			      	</center>
-			      </td>
-			      <td>
-			      	<center>
+			      	
 			      		<label>
 			      		{{$data->budget_deals}}
 			      		</label>
-			      	</center>
+			      	
 			      	<br>
-			      	<center><h5>{{$data->ket_budget_deals}}</h5></center>
+			      	<h5>{{$data->ket_budget_deals}}</h5>
+			      	<label>{{$data->net_deals_per_eps}}</label>
+			      	<label>{{$data->eps}}</label>
+			      	<label>{{$data->type_paket}}</label>
+			      	<label>{{$data->program}}</label>
+			      	<label>{{$data->status_deals}}</label>
 			      </td>
-			      <td><center><label>{{$data->net_deals_per_eps}}</label></center></td>
-			      <td><center><label>{{$data->eps}}</label></center></td>
-			      <td><center><label>{{$data->type_paket}}</label></center></td>
-			      <td><center><label>{{$data->program}}</label></center></td>
-			      <td><center><label>{{$data->status_deals}}</label></center></td>
+			 
 			    </tr>
 			@endforeach
 			
