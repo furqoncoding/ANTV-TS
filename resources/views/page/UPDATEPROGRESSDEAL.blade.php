@@ -52,7 +52,7 @@
 		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
 		            <td>
 		            	@foreach($ts_sponsor_deals as $keyy => $activ)
-				            @if($data->id_sponsor == $activ->id) 
+				            @if($data->id == $activ->id_sponsor) 
 				                <?php echo 'tesssss'; ?>
 				            @endif
 				        @endforeach
