@@ -58,7 +58,7 @@
 		            	<?php
 		            		
 
-							echo $data['id'];
+							echo $data->id;
 
 		            		foreach($ts_sponsor_deals as $index => $activ)
 		            		{
