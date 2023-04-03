@@ -176,7 +176,8 @@ class PageController extends Controller
             'status_deals': $status_deals
         }";
 
-        $detail_progress_sales = json_decode(json_encode($data_detail_progress_sales), true);
+        // $detail_progress_sales = json_decode(json_encode($data_detail_progress_sales), true);
+        $detail_progress_sales = '';
 
         $data = array(
             'ts_sponsor' => $ts_sponsor,
