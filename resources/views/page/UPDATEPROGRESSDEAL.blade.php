@@ -13,7 +13,6 @@
         th{
             width: 100%;
             background-color: black;
-            color: white;
         }
         td{
             background-color: #F8F8FF;
@@ -77,7 +76,7 @@
 		        {
 		        ?>
 
-		            <?phps
+		            <?php
 		        		foreach($ts_sponsor_deals as $index => $activ)
 		        		{
 		        	?>
