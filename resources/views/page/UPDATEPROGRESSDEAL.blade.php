@@ -10,6 +10,11 @@
         tr{
             width: 100%;
         }
+        th{
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
         td{
             background-color: #F8F8FF;
             text-align: center;
@@ -41,58 +46,69 @@
         <input type="text" placeholder="search" onkeyup="gosearch(this)">
     </div>
     <table>
+    	<thead>
+			<tr>
+				<th><center>PLANNED</center></th>
+				<th><center>Nomor Paket</center></th>
+				<th><center>Nomor Media Order</center></th>
+				<th><center>Agency</center></th>
+				<th><center>Advertiser Product</center></th>
+			</tr>
+		</thead>
+    	<tbody>
     	@foreach($data['ts_sponsor'] as $key => $data)
-		        <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product.$data->no_media_order; ?>">
-		            <td>
-		            	<br>
-		            	<center><label>PLANNED</label></center>
-		            	<br>
-		            	<center><label>{{$data->planned_name}}</label></center>
-				      	<center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
-				      	<br>
-		            </td>
-		            <td><center><label>{{$data->no_paket}}</label></center></td>
-		            <td><center><label>{{$data->no_media_order}}</label></center></td>
-		            <td><center><label>{{$data->agency}}</label></center></td>
-		            <td><center><label>{{$data->advertiser_product}}</label></center></td>
-		            <td>
-		            <?php
-		            $counter = 0;
-				    if( $counter == 0 ) 
-		            {
-		            ?>
+		    <tr class="table-row" data-search="<?php echo $data->no_paket.$data->planned_name.$data->planned_email.$data->agency.$data->advertiser_product.$data->no_media_order; ?>">
+		        <td>
+		            <br>
+		            <center><label>PLANNED</label></center>
+		            <br>
+		            <center><label>{{$data->planned_name}}</label></center>
+				    <center><h5 style="margin-top: 9px;">{{$data->planned_email}}</h5></center>
+				    <br>
+		        </td>
+		        <td><center><label>{{$data->no_paket}}</label></center></td>
+		        <td><center><label>{{$data->no_media_order}}</label></center></td>
+		        <td><center><label>{{$data->agency}}</label></center></td>
+		        <td><center><label>{{$data->advertiser_product}}</label></center></td>
+		        <td>
+		        <?php
+		        $counter = 0;
+			    if( $counter == 0 ) 
+		        {
+		        ?>
 
-		            	<?php
-		            		foreach($ts_sponsor_deals as $index => $activ)
-		            		{
-		            	?>
-				            <?php	
-					           	if($activ['id_sponsor'] == $data->id) 
-					            {
-					        ?>
-				            	<br>
-				            	<center><label>SALES</label></center>
-				            	<br>
-				            	<center><label>{{$activ['sales_name']}}</label></center>
-						      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
-						      	<br>
-				            <?php
-				            	}
-				            ?>
+		            <?php
+		        		foreach($ts_sponsor_deals as $index => $activ)
+		        		{
+		        	?>
+				        <?php	
+				           	if($activ['id_sponsor'] == $data->id) 
+				            {
+				        ?>
+			            	<br>
+				            <center><label>SALES</label></center>
+				        	<br>
+				        	<center><label>{{$activ['sales_name']}}</label></center>
+					      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
+					      	<br>
+			            <?php
+			            	}
+			            ?>
 
 				            
-				        <?php
-				        	}
-				        ?>
-
 				    <?php
-				    }
-				    $counter = $counter + 1;
-				    ?>
-		            </td>
+				    	}
+			        ?>
+
+			    <?php
+			    }
+			    $counter = $counter + 1;
+				?>
+		        </td>
 		            
-		        </tr>
-        @endforeach
+		    </tr>
+    	@endforeach
+    	</tbody>
     </table>
     <div id="searchCode"></div>
     <script>
