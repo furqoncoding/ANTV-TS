@@ -153,7 +153,7 @@ class PageController extends Controller
         // $ts_sponsor_deals = DB::select('SELECT * FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
         $ts_sponsor_deals = DB::select('SELECT * FROM ts_sponsor_deals ORDER BY id DESC');
 
-        $detail_progress_sales = "{
+        $data_detail_progress_sales = "{
             'planned_id': $planned_id,
             'planned_name': $planned_name,
             'planned_email': $planned_email,
@@ -176,7 +176,7 @@ class PageController extends Controller
             'status_deals': $status_deals
         }";
 
-        // $detail_progress_sales = '';
+        $detail_progress_sales = json_decode(json_encode($data_detail_progress_sales), true);
 
         $data = array(
             'ts_sponsor' => $ts_sponsor,
