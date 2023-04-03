@@ -52,6 +52,7 @@
 				<th><center>Nomor Media Order</center></th>
 				<th><center>Agency</center></th>
 				<th><center>Advertiser Product</center></th>
+				<th><center>Agency</center></th>
 			</tr>
 		</thead>
     	<tbody>
