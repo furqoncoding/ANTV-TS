@@ -54,6 +54,7 @@
 				<th><h5 style="margin-right: 8px;margin-left: 8px;">Agency</h5></th>
 				<th><h5 style="margin-right: 8px;margin-left: 8px;">Advertiser Product</h5></th>
 				<th><h5 style="margin-right: 8px;margin-left: 8px;">SALES</h5></th>
+				<th style="background-color: grey;"><h5 style="margin-right: 8px;margin-left: 8px;">Action</h5></th>
 			</tr>
 		</thead>
     	<tbody>
