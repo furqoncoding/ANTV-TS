@@ -142,7 +142,7 @@
 			    $counter = $counter + 1;
 				?>
 		        </td>
-		        <td style="background-color: grey;">
+		        <td style="background-color: #D3D3D3;">
 		        <?php
 		        $counter = 0;
 			    if( $counter == 0 ) 
