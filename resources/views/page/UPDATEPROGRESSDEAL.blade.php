@@ -142,7 +142,7 @@
 			    $counter = $counter + 1;
 				?>
 		        </td>
-		        <td>
+		        <td style="background-color: grey;">
 		        <?php
 		        $counter = 0;
 			    if( $counter == 0 ) 
@@ -161,7 +161,7 @@
 				            <center>
 				            	<form class="form-horizontal" method='POST' action="#" enctype="multipart/form-data">
 		                        {{ csrf_field() }}
-		                        
+
 		                            <button type="submit" class="button_detail">
 		                                <img src="{{url('/detail.png')}}" alt="Image" width="25" height="25"/>
 		                            </button>
