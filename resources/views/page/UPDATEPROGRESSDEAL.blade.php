@@ -13,6 +13,7 @@
         th{
             width: 100%;
             background-color: black;
+            color: white;
         }
         td{
             background-color: #F8F8FF;
@@ -52,7 +53,7 @@
 				<th><center>Nomor Media Order</center></th>
 				<th><center>Agency</center></th>
 				<th><center>Advertiser Product</center></th>
-				<th><center>Agency</center></th>
+				<th><center>SALES</center></th>
 			</tr>
 		</thead>
     	<tbody>
