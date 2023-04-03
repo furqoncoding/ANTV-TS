@@ -180,8 +180,8 @@
 				            	'eps'=>$activ['eps'],
 				            	'type_paket'=>$activ['type_paket'],
 
-				            	'type_paket'=>$activ['type_paket'],
-				            	'type_paket'=>$activ['type_paket'] 
+				            	'program'=>$activ['program'],
+				            	'status_deals'=>$activ['status_deals'] 
 				            	])}}" enctype="multipart/form-data">
 		                        {{ csrf_field() }}
 
