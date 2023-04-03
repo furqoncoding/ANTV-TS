@@ -174,7 +174,8 @@ class PageController extends Controller
             'type_paket': $type_paket,
             'program': $program,
             'status_deals': $status_deals
-        }
+        };
+
         $data = array(
             'ts_sponsor' => $ts_sponsor,
             'ts_sponsor_deals' => $ts_sponsor_deals,
