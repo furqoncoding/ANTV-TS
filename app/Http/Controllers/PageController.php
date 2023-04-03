@@ -153,30 +153,30 @@ class PageController extends Controller
         // $ts_sponsor_deals = DB::select('SELECT * FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
         $ts_sponsor_deals = DB::select('SELECT * FROM ts_sponsor_deals ORDER BY id DESC');
 
-        // $detail_progress_sales = {
-        //     'planned_id': $planned_id,
-        //     'planned_name': $planned_name,
-        //     'planned_email': $planned_email,
-        //     'no_paket': $no_paket,
-        //     'no_media_order': $no_media_order,
-        //     'agency': $agency,
-        //     'advertiser_product': $advertiser_product,
-        //     'update_date': $update_date,
-        //     'sales_id': $sales_id,
-        //     'sales_name': $sales_name,
-        //     'sales_email': $sales_email,
-        //     'start_periode': $start_periode,
-        //     'end_periode': $end_periode,
-        //     'budget_deals': $budget_deals,
-        //     'ket_budget_deals': $ket_budget_deals,
-        //     'net_deals_per_eps': $net_deals_per_eps,
-        //     'eps': $eps,
-        //     'type_paket': $type_paket,
-        //     'program': $program,
-        //     'status_deals': $status_deals
-        // };
+        $detail_progress_sales = {
+            'planned_id': $planned_id,
+            'planned_name': $planned_name,
+            'planned_email': $planned_email,
+            'no_paket': $no_paket,
+            'no_media_order': $no_media_order,
+            'agency': $agency,
+            'advertiser_product': $advertiser_product,
+            'update_date': $update_date,
+            'sales_id': $sales_id,
+            'sales_name': $sales_name,
+            'sales_email': $sales_email,
+            'start_periode': $start_periode,
+            'end_periode': $end_periode,
+            'budget_deals': $budget_deals,
+            'ket_budget_deals': $ket_budget_deals,
+            'net_deals_per_eps': $net_deals_per_eps,
+            'eps': $eps,
+            'type_paket': $type_paket,
+            'program': $program,
+            'status_deals': $status_deals
+        };
 
-        $detail_progress_sales = '';
+        // $detail_progress_sales = '';
 
         $data = array(
             'ts_sponsor' => $ts_sponsor,
