@@ -48,12 +48,12 @@
     <table>
     	<thead>
 			<tr>
-				<th><center>PLANNED</center></th>
-				<th><center>Nomor Paket</center></th>
-				<th><center>Nomor Media Order</center></th>
-				<th><center>Agency</center></th>
-				<th><center>Advertiser Product</center></th>
-				<th><center>SALES</center></th>
+				<th><h5 style="margin-right: 8px;margin-left: 8px;">PLANNED</h5></th>
+				<th><h5 style="margin-right: 8px;margin-left: 8px;">Nomor Paket</h5></th>
+				<th><h5 style="margin-right: 8px;margin-left: 8px;">Nomor Media Order</h5></th>
+				<th><h5 style="margin-right: 8px;margin-left: 8px;">Agency</h5></th>
+				<th><h5 style="margin-right: 8px;margin-left: 8px;">Advertiser Product</h5></th>
+				<th><h5 style="margin-right: 8px;margin-left: 8px;">SALES</h5></th>
 			</tr>
 		</thead>
     	<tbody>
