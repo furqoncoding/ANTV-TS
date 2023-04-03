@@ -159,7 +159,7 @@
 				        ?>
 			            	<br>
 				            <center>
-				            	<form class="form-horizontal" method='POST' action="#" enctype="multipart/form-data">
+				            	<form class="form-horizontal" method='POST' action="{{action('PageController@detail_deal', [ 'planned_id'=>$data->planned_id,'planned_name'=>$data->planned_name,'planned_email'=>$data->planned_email,'no_paket'=>$data->no_paket,'no_media_order'=>$data->no_media_order,'agency'=>$data->agency,'advertiser_product'=>$data->advertiser_product,  'update_date'=>$activ['update_date'],'sales_id'=>$activ['sales_id'],'sales_name'=>$activ['sales_name'],'sales_email'=>$activ['sales_email'],'start_periode'=>$activ['start_periode'],'end_periode'=>$activ['end_periode'],'budget_deals'=>$activ['budget_deals'],'ket_budget_deals'=>$activ['ket_budget_deals'],'net_deals_per_eps'=>$activ['net_deals_per_eps'],'eps'=>$activ['eps'],'type_paket'=>$activ['type_paket'] ])}}" enctype="multipart/form-data">
 		                        {{ csrf_field() }}
 
 		                            <button type="submit" class="button_detail">

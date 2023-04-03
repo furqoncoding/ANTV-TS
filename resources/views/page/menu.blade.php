@@ -40,10 +40,18 @@
 
 
 @if($pages == "INPUTPLANNED")
-    <h3>INPUT PLANNED</h3>
-    <br>
-    <br>
-    @include('page.INPUTPLANNED')
+    @if($data['detail_progress_sales'] == "")
+        <h3>INPUT PLANNED</h3>
+        <br>
+        <br>
+        @include('page.INPUTPLANNED')
+    @endif
+    @if($data['detail_progress_sales'] != "")
+        <h3>INPUT PLANNED</h3>
+        <br>
+        <br>
+        @include('page.DETAILDEALSPONSOR')
+    @endif
 @endif
 @if($pages == "UPDATEPROGRESSDEAL")
     <h3>UPDATE PROGRESS DEAL</h3>
@@ -54,6 +62,7 @@
 @if($pages == "UPDATEPROGRESSORDER")
     <h3>UPDATE PROGRESS ORDER</h3>
 @endif
+
 
 
 

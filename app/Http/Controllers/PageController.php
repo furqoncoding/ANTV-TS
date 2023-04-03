@@ -39,6 +39,7 @@ class PageController extends Controller
         $data = array(
             'ts_sponsor' => $ts_sponsor,
             'ts_sponsor_deals' => $ts_sponsor_deals,
+            'detail_progress_sales' => '',
             'menu'=> ''
         );
         return view('page.index')->with('data', $data);
@@ -86,6 +87,7 @@ class PageController extends Controller
                 $data = array(
                     'ts_sponsor' => $ts_sponsor,
                     'ts_sponsor_deals' => $ts_sponsor_deals,
+                    'detail_progress_sales' => '',
                     'menu'=> 'INPUTPLANNED'
                 );
                 return view('page.index')->with('data', $data);
@@ -98,6 +100,7 @@ class PageController extends Controller
                 $data = array(
                     'ts_sponsor' => $ts_sponsor,
                     'ts_sponsor_deals' => $ts_sponsor_deals,
+                    'detail_progress_sales' => '',
                     'menu'=> 'INPUTPLANNED'
                 );
                 return view('page.index')->with('data', $data);
@@ -114,6 +117,7 @@ class PageController extends Controller
             $data = array(
                 'ts_sponsor' => $ts_sponsor,
                 'ts_sponsor_deals' => $ts_sponsor_deals,
+                'detail_progress_sales' => '',
                 'menu'=> 'INPUTPLANNED'
             );
             return view('page.index')->with('data', $data);
@@ -135,11 +139,49 @@ class PageController extends Controller
         $data = array(
             'ts_sponsor' => $ts_sponsor,
             'ts_sponsor_deals' => $ts_sponsor_deals,
+            'detail_progress_sales' => '',
             'menu'=> 'INPUTPLANNED'
         );
         return view('page.index')->with('data', $data);
 
 
+    }
+
+    public function detail_deal($planned_id,$planned_name,$planned_email,$no_paket,$no_media_order,$agency,$advertiser_product,$update_date,$sales_id,$sales_name,$sales_email,$start_periode,$end_periode,$budget_deals,$ket_budget_deals,$net_deals_per_eps,$eps,$type_paket,$program,$status_deals,Request $request)
+    {
+        $ts_sponsor = DB::select('SELECT * FROM ts_sponsor ORDER BY id DESC');
+        // $ts_sponsor_deals = DB::select('SELECT * FROM ts_sponsor_deals INNER JOIN ts_sponsor ON ts_sponsor.id=ts_sponsor_deals.id_sponsor ORDER BY ts_sponsor_deals.id DESC');
+        $ts_sponsor_deals = DB::select('SELECT * FROM ts_sponsor_deals ORDER BY id DESC');
+
+        $detail_progress_sales = {
+            'planned_id': $planned_id,
+            'planned_name': $planned_name,
+            'planned_email': $planned_email,
+            'no_paket': $no_paket,
+            'no_media_order': $no_media_order,
+            'agency': $agency,
+            'advertiser_product': $advertiser_product,
+            'update_date': $update_date,
+            'sales_id': $sales_id,
+            'sales_name': $sales_name,
+            'sales_email': $sales_email,
+            'start_periode': $start_periode,
+            'end_periode': $end_periode,
+            'budget_deals': $budget_deals,
+            'ket_budget_deals': $ket_budget_deals,
+            'net_deals_per_eps': $net_deals_per_eps,
+            'eps': $eps,
+            'type_paket': $type_paket,
+            'program': $program,
+            'status_deals': $status_deals
+        }
+        $data = array(
+            'ts_sponsor' => $ts_sponsor,
+            'ts_sponsor_deals' => $ts_sponsor_deals,
+            'detail_progress_sales' => $detail_progress_sales,
+            'menu'=> 'DETAILSALES'
+        );
+        return view('page.index')->with('data', $data);
     }
 
     public function changemenu(Request $request)
@@ -152,6 +194,7 @@ class PageController extends Controller
             $data = array(
                 'ts_sponsor' => $ts_sponsor,
                 'ts_sponsor_deals' => $ts_sponsor_deals,
+                'detail_progress_sales' => '',
                 'menu'=> 'INPUTPLANNED'
             );
             return view('page.index')->with('data', $data);
@@ -164,6 +207,7 @@ class PageController extends Controller
             $data = array(
                 'ts_sponsor' => $ts_sponsor,
                 'ts_sponsor_deals' => $ts_sponsor_deals,
+                'detail_progress_sales' => '',
                 'menu'=> 'UPDATEPROGRESSDEAL'
             );
             return view('page.index')->with('data', $data);
@@ -176,6 +220,7 @@ class PageController extends Controller
             $data = array(
                 'ts_sponsor' => $ts_sponsor,
                 'ts_sponsor_deals' => $ts_sponsor_deals,
+                'detail_progress_sales' => '',
                 'menu'=> 'UPDATEPROGRESSORDER'
             );
             return view('page.index')->with('data', $data);
@@ -234,6 +279,7 @@ class PageController extends Controller
         $data = array(
             'ts_sponsor' => $ts_sponsor,
             'ts_sponsor_deals' => $ts_sponsor_deals,
+            'detail_progress_sales' => '',
             'menu'=> 'INPUTPLANNED'
         );
         return view('page.index')->with('data', $data);

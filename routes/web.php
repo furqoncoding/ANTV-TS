@@ -31,4 +31,8 @@ Route::get('/insert_INPUTPLANNED', function (Request $request){
 Route::post("/insert_INPUTPLANNED", "PageController@insert_INPUTPLANNED");
 
 
+Route::get('detail_deal/planned_id/{planned_id}/planned_name/{planned_name}/planned_email/{planned_email}/no_paket/{no_paket}/no_media_order/{no_media_order}/agency/{agency}/advertiser_product/{advertiser_product}/update_date/{update_date}/sales_id/{sales_id}/sales_name/{sales_name}/sales_email/{sales_email}/start_periode/{start_periode}/end_periode/{end_periode}/budget_deals/{budget_deals}/ket_budget_deals/{ket_budget_deals}/net_deals_per_eps/{net_deals_per_eps}/eps/{eps}/type_paket/{type_paket}/program/{program}/status_deals/{status_deals}', 'PageController@detail_deal')->name('request.manage');
+Route::post("/detail_deal", "PageController@detail_deal");
+
+
 Route::get('/page', 'PageController@index')->name('page.index');
