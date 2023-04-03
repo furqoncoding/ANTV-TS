@@ -28,6 +28,41 @@
             border: 1px solid #00000022;
             border-radius: 5px;
         }
+
+        .button_detail {
+            margin: auto;
+            margin-top: 18px;
+            width: 90%;
+            height: 8%;
+            background-color: transparent;
+            border-width: 0px;
+            border-radius: 8px;
+            border-color: white;
+            color: white;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            text-transform: uppercase;
+            cursor: pointer; 
+        }
+        .button_detail:active {
+            margin: auto;
+            margin-top: 18px;
+            width: 90%;
+            height: 8%;
+            background-color: transparent;
+            border-width: 0px;
+            border-radius: 8px;
+            border-color: white;
+            color: white;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            text-transform: uppercase;
+            cursor: pointer; 
+        }
     </style>
 </head>
 
@@ -92,6 +127,46 @@
 				        	<br>
 				        	<center><label>{{$activ['sales_name']}}</label></center>
 					      	<center><h5 style="margin-top: 9px;">{{$activ['sales_email']}}</h5></center>
+					      	<br>
+			            <?php
+			            	}
+			            ?>
+
+				            
+				    <?php
+				    	}
+			        ?>
+
+			    <?php
+			    }
+			    $counter = $counter + 1;
+				?>
+		        </td>
+		        <td>
+		        <?php
+		        $counter = 0;
+			    if( $counter == 0 ) 
+		        {
+		        ?>
+
+		            <?php
+		        		foreach($ts_sponsor_deals as $index => $activ)
+		        		{
+		        	?>
+				        <?php	
+				           	if($activ['id_sponsor'] == $data->id) 
+				            {
+				        ?>
+			            	<br>
+				            <center>
+				            	<form class="form-horizontal" method='POST' action="#" enctype="multipart/form-data">
+		                        {{ csrf_field() }}
+		                        
+		                            <button type="submit" class="button_detail">
+		                                <img src="{{url('/detail.png')}}" alt="Image" width="25" height="25"/>
+		                            </button>
+		                        </form>
+				            </center>
 					      	<br>
 			            <?php
 			            	}
